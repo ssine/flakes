@@ -57,7 +57,8 @@ stdenv.mkDerivation rec {
       --set QT_PLUGIN_PATH  "$out/lib/netease-cloud-music/plugins" \
       --set QT_QPA_PLATFORM_PLUGIN_PATH "$out/lib/netease-cloud-music/plugins/platforms" \
       --set QCEF_INSTALL_PATH "$out/lib/netease-cloud-music/libs/qcef" \
-      --set QT_XKB_CONFIG_ROOT "${xorg.xkeyboardconfig}/share/X11/xkb"
+      --set QT_XKB_CONFIG_ROOT "${xorg.xkeyboardconfig}/share/X11/xkb" \
+      --unset SESSION_MANAGER
   '';
 
   meta = {
